@@ -4,7 +4,7 @@ window.onload = function() {
 	var context = canvas.getContext('2d');
 
 
-	drawQuadraticCurve(500, 250, 600, 50, 700, 250, 'blue', 5);
+// 	drawQuadraticCurve(500, 250, 600, 50, 700, 250, 'blue', 5);
 	drawBezierCurve(200, 250, 100, 100, 500, 100, 400, 250, 'green', 6);
 
 	function drawQuadraticCurve(startX, startY, controlX, controlY, endX, endY, curveColor, curveWidth) {
@@ -34,14 +34,39 @@ window.onload = function() {
 	}
 
 	function drawBezierCurve(startX, startY, controlX1, controlY1, controlX2, controlY2, endX, endY, curveColor, curveWidth) {
+        var radian = Math.PI / 180;
 
-		// context.bezierCurveTo(controlX1,controlY1,controlX2,controlY2,endX, endY);
+		// Draw the bezier curve
 		context.beginPath();
 		context.strokeStyle = curveColor;
 		context.lineWidth = curveWidth;
 		context.moveTo(startX, startY);
 		context.bezierCurveTo(controlX1, controlY1, controlX2, controlY2, endX, endY);
 		context.stroke();
+
+		// Draw the control point as a circle
+		context.beginPath();
+		context.strokeStyle = 'black';
+		context.lineWidth = 10;
+		context.arc(controlX1,controlY1,5,0 * radian, 360 * radian, false)
+		context.stroke()
+
+	    // Draw the control point as a circle
+		context.beginPath();
+		context.strokeStyle = 'black';
+		context.lineWidth = 10;
+		context.arc(controlX2,controlY2,5,0 * radian, 360 * radian, false)
+		context.stroke()
+
+		// Draw the lines between control point and path
+		context.beginPath();
+		context.lineWidth = 1;
+		context.moveTo(startX, startY);
+		context.lineTo(controlX1, controlY1);
+		context.lineTo(controlX2, controlY2);
+		context.lineTo(endX, endY);
+		context.stroke();
+
 	}
 
 }
