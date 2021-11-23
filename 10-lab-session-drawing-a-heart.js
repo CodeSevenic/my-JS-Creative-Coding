@@ -4,12 +4,24 @@ window.onload = function() {
 	var context = canvas.getContext('2d');
 
 
-// 	drawQuadraticCurve(500, 250, 600, 50, 700, 250, 'blue', 5);
+	// Heart
+	context.beginPath()
+	context.strokeStyle = 'red';
+	context.lineWidth = 10;
+	context.moveTo(430, 130);
+	context.bezierCurveTo(470, 10, 670, 10, 670, 180);
+	context.quadraticCurveTo(670, 380, 430, 520);
+	context.quadraticCurveTo(190, 380, 190, 180);
+	context.bezierCurveTo(190, 10, 400, 10, 430, 130);
+	context.stroke();
+
+
     // right
-	drawBezierCurve(430, 130, 470, 10, 670, 10, 670, 180, 'green', 6);
-	drawQuadraticCurve(670, 180, 670, 380,430, 520,'green', 6)
+// 	drawBezierCurve(430, 130, 470, 10, 670, 10, 670, 180, 'green', 6);
+// 	drawQuadraticCurve(670, 180, 670, 380,430, 520,'green', 6)
 	// left
-	drawBezierCurve(430, 130, 400, 10, 190, 10, 190, 180, 'green', 6);
+// 	drawBezierCurve(430, 130, 400, 10, 190, 10, 190, 180, 'green', 6);
+// 	drawQuadraticCurve(190,180, 190, 380, 430,520, 'green', 6)
 
 
 	function drawQuadraticCurve(startX, startY, controlX, controlY, endX, endY, curveColor, curveWidth) {
