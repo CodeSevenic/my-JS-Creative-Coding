@@ -5,7 +5,12 @@ window.onload = function() {
 
 
 // 	drawQuadraticCurve(500, 250, 600, 50, 700, 250, 'blue', 5);
-	drawBezierCurve(200, 250, 100, 100, 500, 100, 400, 250, 'green', 6);
+    // right
+	drawBezierCurve(430, 130, 470, 10, 670, 10, 670, 180, 'green', 6);
+	drawQuadraticCurve(670, 180, 670, 380,430, 520,'green', 6)
+	// left
+	drawBezierCurve(430, 130, 400, 10, 190, 10, 190, 180, 'green', 6);
+
 
 	function drawQuadraticCurve(startX, startY, controlX, controlY, endX, endY, curveColor, curveWidth) {
 		var radian = Math.PI / 180;
