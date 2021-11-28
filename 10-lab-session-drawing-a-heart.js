@@ -51,7 +51,7 @@ window.onload = function () {
     context.beginPath();
     context.lineWidth = 1;
     context.moveTo(startX, startY);
-    context.lineTo(controlX, controlY);
+    // context.lineTo(controlX, controlY);
     context.lineTo(endX, endY);
     context.stroke();
   }
