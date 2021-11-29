@@ -50,7 +50,7 @@ window.onload = function () {
     // Draw the lines between control point and path
     context.beginPath();
     context.lineWidth = 1;
-    // context.moveTo(startX, startY);
+    context.moveTo(startX, startY);
     context.lineTo(controlX, controlY);
     context.lineTo(endX, endY);
     context.stroke();
