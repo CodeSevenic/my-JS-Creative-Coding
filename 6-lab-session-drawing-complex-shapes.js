@@ -13,7 +13,7 @@ window.onload = function () {
   */
 
   // first Z object
-  context.beginPath();
+  // context.beginPath();
   context.strokeStyle = 'red';
   context.lineWidth = 15;
   context.lineCap = 'butt';
