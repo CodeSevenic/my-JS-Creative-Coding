@@ -14,7 +14,7 @@ window.onload = function () {
 
   // first Z object
   context.beginPath();
-  // context.strokeStyle = 'red';
+  context.strokeStyle = 'red';
   context.lineWidth = 15;
   context.lineCap = 'butt';
   context.lineJoin = 'miter';
