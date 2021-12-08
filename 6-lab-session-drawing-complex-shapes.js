@@ -13,7 +13,7 @@ window.onload = function () {
   */
 
   // first Z object
-  context.beginPath();
+  // context.beginPath();
   context.strokeStyle = 'red';
   context.lineWidth = 15;
   context.lineCap = 'butt';
@@ -27,14 +27,14 @@ window.onload = function () {
   context.lineTo(80, 180);
   context.lineTo(180, 180);
   context.stroke();
-  
+
   // first Z object
   context.beginPath();
   context.strokeStyle = 'blue';
   context.lineWidth = 15;
   context.lineCap = 'round';
   context.lineJoin = 'round';
-    context.shadowColor = 'yellow';
+  context.shadowColor = 'yellow';
   context.shadowOffsetX = 10;
   context.shadowOffsetY = 10;
   context.shadowBlur = 10;
@@ -43,14 +43,14 @@ window.onload = function () {
   context.lineTo(340, 180);
   context.lineTo(240, 180);
   context.stroke();
-  
+
   // first Z object
   context.beginPath();
   context.strokeStyle = 'green';
   context.lineWidth = 15;
   context.lineCap = 'square';
   context.lineJoin = 'bevel';
-    context.shadowColor = 'red';
+  context.shadowColor = 'red';
   context.shadowOffsetX = 10;
   context.shadowOffsetY = 10;
   context.shadowBlur = 10;
@@ -59,5 +59,4 @@ window.onload = function () {
   context.lineTo(440, 180);
   context.lineTo(540, 180);
   context.stroke();
-
-}
+};
